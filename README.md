@@ -1,0 +1,2 @@
+# darslik
+vaqt 
