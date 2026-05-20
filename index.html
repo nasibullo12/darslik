@@ -17,7 +17,6 @@
 }
 body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,sans-serif;min-height:100vh;max-width:430px;margin:0 auto;padding-bottom:50px;}
 
-/* HEADER */
 .header{padding:52px 20px 6px;display:flex;justify-content:space-between;align-items:flex-end;}
 .header-title{font-size:2rem;font-weight:800;letter-spacing:-0.5px;}
 .header-right{display:flex;align-items:center;gap:8px;}
@@ -25,22 +24,18 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .add-btn{width:32px;height:32px;border-radius:50%;background:var(--surface2);border:none;color:var(--orange);font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.15s;}
 .add-btn:active{transform:scale(0.88);}
 
-/* TABS */
 .nav-tabs{display:flex;gap:0;padding:14px 20px 6px;border-bottom:1px solid var(--border);}
 .nav-tab{flex:1;padding:8px 4px;font-size:0.82rem;font-weight:700;border:none;background:transparent;color:var(--muted);cursor:pointer;font-family:'Nunito',sans-serif;border-bottom:2px solid transparent;transition:all 0.18s;}
 .nav-tab.active{color:var(--orange);border-bottom-color:var(--orange);}
 
-/* DAY TABS */
 .day-tabs{display:flex;gap:7px;padding:10px 20px;overflow-x:auto;scrollbar-width:none;}
 .day-tabs::-webkit-scrollbar{display:none;}
 .day-tab{flex-shrink:0;padding:6px 13px;border-radius:20px;font-size:0.82rem;font-weight:600;border:none;cursor:pointer;background:var(--surface);color:var(--muted);transition:all 0.18s;font-family:'Nunito',sans-serif;}
 .day-tab.active{background:var(--orange);color:#000;}
 .day-tab.has-l{color:var(--text);}
 
-/* SECTION */
 .sec-label{padding:10px 20px 5px;font-size:0.72rem;font-weight:700;color:var(--muted);letter-spacing:0.8px;text-transform:uppercase;}
 
-/* LESSON ROWS */
 .lesson-list{padding:0 16px;}
 .lesson-row{display:flex;align-items:center;padding:13px 14px;background:var(--surface);border-radius:4px;margin-bottom:2px;gap:12px;position:relative;overflow:hidden;transition:opacity 0.25s;}
 .lesson-row:first-child{border-radius:14px 14px 4px 4px;}
@@ -62,6 +57,9 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .lesson-sub{font-size:0.72rem;color:var(--muted);margin-top:1px;}
 .lesson-sub.soon-c{color:var(--orange);}
 
+.row-actions{display:flex;align-items:center;gap:6px;}
+.edit-btn{width:26px;height:26px;border-radius:50%;background:rgba(10,132,255,0.13);border:none;color:var(--blue);font-size:0.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
 .toggle-wrap{display:flex;flex-direction:column;align-items:center;gap:2px;}
 .toggle{width:51px;height:31px;border-radius:16px;background:var(--surface2);position:relative;cursor:pointer;transition:background 0.25s;border:none;flex-shrink:0;}
 .toggle.on{background:var(--green);}
@@ -73,14 +71,15 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .del-btn{width:26px;height:26px;border-radius:50%;background:rgba(255,69,58,0.13);border:none;color:var(--red);font-size:0.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;flex-shrink:0;}
 .lesson-row:hover .del-btn,.lesson-row.show-del .del-btn{opacity:1;}
 
-/* EMPTY */
 .empty-state{text-align:center;padding:48px 20px;color:var(--muted);}
 .empty-icon{font-size:2.4rem;margin-bottom:10px;}
 .empty-text{font-size:0.9rem;}
 
-/* STATS PAGE */
+/* STATS */
 .stats-page{padding:16px;}
-.stats-header{font-size:1rem;font-weight:700;color:var(--muted);margin-bottom:14px;padding:0 4px;}
+.month-selector{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;margin-bottom:4px;}
+.month-nav{background:var(--surface2);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.month-label{font-size:0.95rem;font-weight:700;}
 
 .student-stat-card{background:var(--surface);border-radius:16px;padding:16px;margin-bottom:10px;}
 .stat-name{font-size:1rem;font-weight:700;margin-bottom:10px;}
@@ -91,12 +90,12 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .stat-val.red{color:var(--red);}
 .stat-val.orange{color:var(--orange);}
 .stat-val.purple{color:var(--purple);}
-
 .stat-divider{height:1px;background:var(--border);margin:10px 0;}
 
-.month-selector{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;margin-bottom:4px;}
-.month-nav{background:var(--surface2);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.month-label{font-size:0.95rem;font-weight:700;}
+.salary-card{background:var(--surface);border:1px solid var(--purple);border-radius:16px;padding:16px;margin-bottom:10px;}
+.salary-title{font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:12px;}
+.salary-total{font-size:1.8rem;font-weight:800;color:var(--purple);margin-bottom:4px;}
+.salary-sub{font-size:0.78rem;color:var(--muted);}
 
 /* CONFIRM MODAL */
 .confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.2s;}
@@ -106,17 +105,17 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .confirm-icon{font-size:2.5rem;margin-bottom:10px;}
 .confirm-title{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
 .confirm-sub{font-size:0.85rem;color:var(--muted);margin-bottom:20px;line-height:1.4;}
-.confirm-btns{display:flex;gap:10px;}
-.cbtn{flex:1;padding:13px;border-radius:12px;border:none;font-family:'Nunito',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:transform 0.15s;}
+.confirm-btns{display:flex;flex-wrap:wrap;gap:8px;}
+.cbtn{flex:1;min-width:80px;padding:12px;border-radius:12px;border:none;font-family:'Nunito',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;transition:transform 0.15s;}
 .cbtn:active{transform:scale(0.96);}
 .cbtn-yes{background:var(--green);color:#000;}
 .cbtn-no{background:var(--surface2);color:var(--text);}
 .cbtn-skip{background:rgba(255,69,58,0.15);color:var(--red);}
 
-/* ADD MODAL */
+/* ADD/EDIT MODAL */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.72);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity 0.22s;}
 .overlay.open{opacity:1;pointer-events:all;}
-.modal{width:100%;background:#1c1c1e;border-radius:20px 20px 0 0;padding:18px 20px 44px;transform:translateY(100%);transition:transform 0.28s cubic-bezier(.4,0,.2,1);}
+.modal{width:100%;background:#1c1c1e;border-radius:20px 20px 0 0;padding:18px 20px 44px;transform:translateY(100%);transition:transform 0.28s cubic-bezier(.4,0,.2,1);max-height:90vh;overflow-y:auto;}
 .overlay.open .modal{transform:translateY(0);}
 .modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 18px;}
 .modal-title{font-size:1.1rem;font-weight:700;margin-bottom:16px;}
@@ -125,14 +124,12 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
 .field input,.field select{width:100%;background:var(--surface2);border:none;border-radius:10px;color:var(--text);font-family:'Nunito',sans-serif;font-size:1rem;padding:12px 14px;outline:none;-webkit-appearance:none;}
 .field select option{background:var(--surface2);}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.rem-row{display:flex;gap:8px;margin-bottom:18px;}
+.rem-row{display:flex;gap:8px;margin-bottom:14px;}
 .rem-btn{flex:1;padding:10px;border-radius:10px;border:1.5px solid var(--border);background:transparent;color:var(--muted);font-family:'Nunito',sans-serif;font-size:0.86rem;font-weight:600;cursor:pointer;transition:all 0.18s;}
 .rem-btn.active{border-color:var(--orange);color:var(--orange);background:rgba(255,159,10,0.08);}
-.save-btn{width:100%;padding:14px;background:var(--orange);color:#000;border:none;border-radius:13px;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:transform 0.15s;}
+.save-btn{width:100%;padding:14px;background:var(--orange);color:#000;border:none;border-radius:13px;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:transform 0.15s;margin-top:6px;}
 .save-btn:active{transform:scale(0.97);}
-
-/* PRICE INPUT */
-.price-row{display:flex;align-items:center;gap:8px;background:var(--surface2);border-radius:10px;padding:4px 14px 4px 4px;margin-bottom:18px;}
+.price-row{display:flex;align-items:center;gap:8px;background:var(--surface2);border-radius:10px;padding:4px 14px 4px 4px;margin-bottom:14px;}
 .price-row input{flex:1;background:transparent;border:none;color:var(--text);font-family:'Nunito',sans-serif;font-size:1rem;padding:10px 10px;outline:none;}
 .price-row span{font-size:0.85rem;color:var(--muted);font-weight:600;}
 
@@ -149,19 +146,16 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
   </div>
 </div>
 
-<!-- Nav tabs -->
 <div class="nav-tabs">
   <button class="nav-tab active" id="tabJadval" onclick="switchTab('jadval')">Jadval</button>
   <button class="nav-tab" id="tabStat" onclick="switchTab('stat')">Statistika</button>
 </div>
 
-<!-- JADVAL PAGE -->
 <div id="pageJadval">
   <div class="day-tabs" id="dayTabs"></div>
   <div id="content"></div>
 </div>
 
-<!-- STATISTIKA PAGE -->
 <div id="pageStat" style="display:none">
   <div class="month-selector">
     <button class="month-nav" onclick="changeMonth(-1)">‹</button>
@@ -171,7 +165,7 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
   <div class="stats-page" id="statsContent"></div>
 </div>
 
-<!-- Confirm modal -->
+<!-- Confirm -->
 <div class="confirm-overlay" id="confirmOverlay">
   <div class="confirm-box">
     <div class="confirm-icon" id="cfIcon">📚</div>
@@ -181,83 +175,44 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',-apple-system,s
   </div>
 </div>
 
-<!-- Add modal -->
+<!-- Add/Edit modal -->
 <div class="overlay" id="overlay" onclick="bgClose(event)">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-title">Yangi shogird qo'shish</div>
+    <div class="modal-title" id="modalTitle">Yangi shogird</div>
     <div class="field">
       <label>Shogird ismi</label>
       <input type="text" id="fName" placeholder="Ismi">
     </div>
     <div class="two-col">
-      <div class="field">
-        <label>Dars kuni 1</label>
-        <select id="fDay1">
-          <option value="">— yo'q —</option>
-          <option value="0">Dushanba</option>
-          <option value="1">Seshanba</option>
-          <option value="2">Chorshanba</option>
-          <option value="3">Payshanba</option>
-          <option value="4">Juma</option>
-          <option value="5">Shanba</option>
-          <option value="6">Yakshanba</option>
-        </select>
+      <div class="field"><label>Kun 1</label>
+        <select id="fDay1"><option value="">— yo'q —</option><option value="0">Dushanba</option><option value="1">Seshanba</option><option value="2">Chorshanba</option><option value="3">Payshanba</option><option value="4">Juma</option><option value="5">Shanba</option><option value="6">Yakshanba</option></select>
       </div>
-      <div class="field">
-        <label>Vaqt 1</label>
-        <input type="time" id="fTime1" value="09:00">
-      </div>
+      <div class="field"><label>Vaqt 1</label><input type="time" id="fTime1" value="09:00"></div>
     </div>
     <div class="two-col">
-      <div class="field">
-        <label>Dars kuni 2</label>
-        <select id="fDay2">
-          <option value="">— yo'q —</option>
-          <option value="0">Dushanba</option>
-          <option value="1">Seshanba</option>
-          <option value="2">Chorshanba</option>
-          <option value="3">Payshanba</option>
-          <option value="4">Juma</option>
-          <option value="5">Shanba</option>
-          <option value="6">Yakshanba</option>
-        </select>
+      <div class="field"><label>Kun 2</label>
+        <select id="fDay2"><option value="">— yo'q —</option><option value="0">Dushanba</option><option value="1">Seshanba</option><option value="2">Chorshanba</option><option value="3">Payshanba</option><option value="4">Juma</option><option value="5">Shanba</option><option value="6">Yakshanba</option></select>
       </div>
-      <div class="field">
-        <label>Vaqt 2</label>
-        <input type="time" id="fTime2" value="11:00">
-      </div>
+      <div class="field"><label>Vaqt 2</label><input type="time" id="fTime2" value="11:00"></div>
     </div>
     <div class="two-col">
-      <div class="field">
-        <label>Dars kuni 3</label>
-        <select id="fDay3">
-          <option value="">— yo'q —</option>
-          <option value="0">Dushanba</option>
-          <option value="1">Seshanba</option>
-          <option value="2">Chorshanba</option>
-          <option value="3">Payshanba</option>
-          <option value="4">Juma</option>
-          <option value="5">Shanba</option>
-          <option value="6">Yakshanba</option>
-        </select>
+      <div class="field"><label>Kun 3</label>
+        <select id="fDay3"><option value="">— yo'q —</option><option value="0">Dushanba</option><option value="1">Seshanba</option><option value="2">Chorshanba</option><option value="3">Payshanba</option><option value="4">Juma</option><option value="5">Shanba</option><option value="6">Yakshanba</option></select>
       </div>
-      <div class="field">
-        <label>Vaqt 3</label>
-        <input type="time" id="fTime3" value="14:00">
-      </div>
+      <div class="field"><label>Vaqt 3</label><input type="time" id="fTime3" value="14:00"></div>
     </div>
     <div class="field"><label>Eslatma vaqti</label></div>
     <div class="rem-row">
       <button class="rem-btn active" data-v="5" onclick="pickRem(this)">5 daqiqa oldin</button>
       <button class="rem-btn" data-v="10" onclick="pickRem(this)">10 daqiqa oldin</button>
     </div>
-    <div class="field"><label>Dars narxi (ixtiyoriy)</label></div>
+    <div class="field"><label>Dars narxi (so'm)</label></div>
     <div class="price-row">
       <input type="number" id="fPrice" placeholder="0">
       <span>so'm / dars</span>
     </div>
-    <button class="save-btn" onclick="saveStudent()">Qo'shish</button>
+    <button class="save-btn" id="saveBtn" onclick="saveStudent()">Qo'shish</button>
   </div>
 </div>
 
@@ -266,129 +221,164 @@ const DAYS=['Dushanba','Seshanba','Chorshanba','Payshanba','Juma','Shanba','Yaks
 const DS=['Du','Se','Ch','Pa','Ju','Sh','Ya'];
 const MONTHS=['Yanvar','Fevral','Mart','Aprel','May','Iyun','Iyul','Avgust','Sentabr','Oktabr','Noyabr','Dekabr'];
 
-// students: [{id, name, schedule:[{day,time}], rem, price, history:[{date,status}]}]
-let students = JSON.parse(localStorage.getItem('dars4_students')||'[]');
-let selDay = todayIdx();
-let remMin = 5;
-let noted = new Set(JSON.parse(sessionStorage.getItem('dars4_noted')||'[]'));
-let curTab = 'jadval';
-let statMonth = new Date().getMonth();
-let statYear = new Date().getFullYear();
-let confirmCb = null;
+let students=JSON.parse(localStorage.getItem('dars5_s')||'[]');
+let selDay=todayIdx();
+let remMin=5;
+let noted=new Set(JSON.parse(sessionStorage.getItem('dars5_n')||'[]'));
+let curTab='jadval';
+let statMonth=new Date().getMonth();
+let statYear=new Date().getFullYear();
+let editingId=null;
 
-function persist(){ localStorage.setItem('dars4_students', JSON.stringify(students)); }
+function persist(){localStorage.setItem('dars5_s',JSON.stringify(students));}
 
-function todayIdx(){ const d=new Date().getDay(); return d===0?6:d-1; }
-function nowMin(){ const n=new Date(); return n.getHours()*60+n.getMinutes(); }
-function toMin(t){ const[h,m]=t.split(':').map(Number); return h*60+m; }
-function todayKey(){ const n=new Date(); return `${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`; }
-function dateKey(d){ return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
+function todayIdx(){const d=new Date().getDay();return d===0?6:d-1;}
+
+function nowMin(){const n=new Date();return n.getHours()*60+n.getMinutes();}
+
+function toMin(t){const[h,m]=t.split(':').map(Number);return h*60+m;}
+
+function todayKey(){const n=new Date();return `${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`;}
 
 function pickRem(btn){
   document.querySelectorAll('.rem-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active'); remMin=+btn.dataset.v;
+  btn.classList.add('active');remMin=+btn.dataset.v;
 }
 
-function openModal(){ document.getElementById('overlay').classList.add('open'); }
-function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
-function bgClose(e){ if(e.target===document.getElementById('overlay')) closeModal(); }
+function openModal(id){
+  editingId=id||null;
+  document.getElementById('modalTitle').textContent=id?'Shogirdni tahrirlash':'Yangi shogird';
+  document.getElementById('saveBtn').textContent=id?"Saqlash":"Qo'shish";
+
+  if(id){
+    const s=students.find(x=>x.id===id);
+    if(!s) return;
+    document.getElementById('fName').value=s.name;
+    document.getElementById('fPrice').value=s.price||'';
+    remMin=s.rem||5;
+    document.querySelectorAll('.rem-btn').forEach(b=>{
+      b.classList.toggle('active',+b.dataset.v===remMin);
+    });
+    for(let i=1;i<=3;i++){
+      const sc=s.schedule[i-1];
+      document.getElementById(`fDay${i}`).value=sc?sc.day:'';
+      document.getElementById(`fTime${i}`).value=sc?sc.time:(i===1?'09:00':i===2?'11:00':'14:00');
+    }
+  } else {
+    document.getElementById('fName').value='';
+    document.getElementById('fPrice').value='';
+    for(let i=1;i<=3;i++){
+      document.getElementById(`fDay${i}`).value='';
+      document.getElementById(`fTime${i}`).value=i===1?'09:00':i===2?'11:00':'14:00';
+    }
+    remMin=5;
+    document.querySelectorAll('.rem-btn').forEach((b,i)=>b.classList.toggle('active',i===0));
+  }
+  document.getElementById('overlay').classList.add('open');
+}
+
+function closeModal(){document.getElementById('overlay').classList.remove('open');editingId=null;}
+function bgClose(e){if(e.target===document.getElementById('overlay'))closeModal();}
 
 function saveStudent(){
-  const name = document.getElementById('fName').value.trim();
+  const name=document.getElementById('fName').value.trim();
   if(!name) return;
-
-  const schedule = [];
+  const schedule=[];
   for(let i=1;i<=3;i++){
-    const day = document.getElementById(`fDay${i}`).value;
-    const time = document.getElementById(`fTime${i}`).value;
-    if(day!=='') schedule.push({day:+day, time});
+    const day=document.getElementById(`fDay${i}`).value;
+    const time=document.getElementById(`fTime${i}`).value;
+    if(day!=='') schedule.push({day:+day,time});
   }
-  if(!schedule.length){ alert("Kamida 1 ta dars kuni tanlang!"); return; }
+  if(!schedule.length){alert("Kamida 1 ta dars kuni tanlang!");return;}
+  const price=+document.getElementById('fPrice').value||0;
 
-  const price = +document.getElementById('fPrice').value || 0;
-
-  students.push({ id:Date.now(), name, schedule, rem:remMin, price, history:[] });
-  persist();
-  document.getElementById('fName').value='';
-  document.getElementById('fPrice').value='';
-  closeModal();
-  render();
+  if(editingId){
+    const s=students.find(x=>x.id===editingId);
+    if(s){s.name=name;s.schedule=schedule;s.rem=remMin;s.price=price;}
+  } else {
+    students.push({id:Date.now(),name,schedule,rem:remMin,price,history:[]});
+  }
+  persist();closeModal();render();
 }
 
 function deleteStudent(id){
-  showConfirm('🗑️','Shogirdni o\'chirish','Barcha ma\'lumotlar o\'chib ketadi!',[
-    {label:"O'chirish", cls:'cbtn-skip', fn:()=>{ students=students.filter(s=>s.id!==id); persist(); render(); }}
+  showConfirm('🗑️',"O'chirish",'Barcha ma\'lumotlar o\'chib ketadi!',[
+    {label:"O'chirish",cls:'cbtn-skip',fn:()=>{students=students.filter(s=>s.id!==id);persist();render();}}
   ]);
 }
 
-// Get lessons for a specific day (returns [{student, schedItem}])
 function getLessonsForDay(dayIdx){
   const res=[];
   students.forEach(s=>{
     s.schedule.forEach(sc=>{
-      if(sc.day===dayIdx) res.push({student:s, time:sc.time});
+      if(sc.day===dayIdx) res.push({student:s,time:sc.time});
     });
   });
   res.sort((a,b)=>a.time.localeCompare(b.time));
   return res;
 }
 
-// Get today's history status for a student+time
-function getTodayStatus(student, time){
-  const key = todayKey();
-  const h = student.history.find(x=>x.date===key && x.time===time);
-  return h ? h.status : null; // 'done', 'skipped', null
+function getTodayStatus(student,time){
+  const key=todayKey();
+  const h=student.history.find(x=>x.date===key&&x.time===time);
+  return h?h.status:null;
 }
 
-function setHistory(studentId, time, status){
-  const s = students.find(x=>x.id===studentId);
+function setHistory(studentId,time,status){
+  const s=students.find(x=>x.id===studentId);
   if(!s) return;
-  const key = todayKey();
-  const idx = s.history.findIndex(x=>x.date===key && x.time===time);
+  const key=todayKey();
+  const idx=s.history.findIndex(x=>x.date===key&&x.time===time);
   if(idx>=0) s.history[idx].status=status;
-  else s.history.push({date:key, time, status});
-  persist(); render();
+  else s.history.push({date:key,time,status});
+  persist();render();
 }
 
-function toggleLesson(studentId, time, currentStatus){
-  const s = students.find(x=>x.id===studentId);
+function toggleLesson(studentId,time,currentStatus){
+  const s=students.find(x=>x.id===studentId);
   if(!s) return;
   if(currentStatus==='done'){
-    // undo
-    const key=todayKey();
-    s.history = s.history.filter(x=>!(x.date===key&&x.time===time));
-    persist(); render();
+    showConfirm('↺','Qaytarish','Bu darsni o\'tilmagan deb belgilash?',[
+      {label:'Ha',cls:'cbtn-yes',fn:()=>{
+        const key=todayKey();
+        s.history=s.history.filter(x=>!(x.date===key&&x.time===time));
+        persist();render();
+      }}
+    ]);
+  } else if(currentStatus==='skipped'){
+    showConfirm('↺','Qaytarish','Bu darsni o\'tilmagan deb belgilash?',[
+      {label:'Ha',cls:'cbtn-yes',fn:()=>{
+        const key=todayKey();
+        s.history=s.history.filter(x=>!(x.date===key&&x.time===time));
+        persist();render();
+      }}
+    ]);
   } else {
-    // ask
-    showConfirm('📚', `${s.name}`, `${time} — dars o'tdimi?`,[
-      {label:"Ha, o'tdi ✓", cls:'cbtn-yes', fn:()=>setHistory(studentId,time,'done')},
-      {label:"Qoldirildi ✗", cls:'cbtn-skip', fn:()=>setHistory(studentId,time,'skipped')}
+    showConfirm('📚',s.name,`${time} — dars holati?`,[
+      {label:"✓ O'tildi",cls:'cbtn-yes',fn:()=>setHistory(studentId,time,'done')},
+      {label:"✗ Qoldirildi",cls:'cbtn-skip',fn:()=>setHistory(studentId,time,'skipped')}
     ]);
   }
 }
 
-function showConfirm(icon, title, sub, btns){
+function showConfirm(icon,title,sub,btns){
   document.getElementById('cfIcon').textContent=icon;
   document.getElementById('cfTitle').textContent=title;
   document.getElementById('cfSub').textContent=sub;
-  const bc=document.getElementById('cfBtns');
-  bc.innerHTML='';
-  // Cancel always
+  const bc=document.getElementById('cfBtns');bc.innerHTML='';
   const cancel=document.createElement('button');
-  cancel.className='cbtn cbtn-no'; cancel.textContent='Bekor';
-  cancel.onclick=closeConfirm; bc.appendChild(cancel);
+  cancel.className='cbtn cbtn-no';cancel.textContent='Bekor';
+  cancel.onclick=closeConfirm;bc.appendChild(cancel);
   btns.forEach(b=>{
     const btn=document.createElement('button');
-    btn.className=`cbtn ${b.cls}`; btn.textContent=b.label;
-    btn.onclick=()=>{ closeConfirm(); b.fn(); };
+    btn.className=`cbtn ${b.cls}`;btn.textContent=b.label;
+    btn.onclick=()=>{closeConfirm();b.fn();};
     bc.appendChild(btn);
   });
   document.getElementById('confirmOverlay').classList.add('open');
 }
+function closeConfirm(){document.getElementById('confirmOverlay').classList.remove('open');}
 
-function closeConfirm(){ document.getElementById('confirmOverlay').classList.remove('open'); }
-
-// RENDER
 function switchTab(t){
   curTab=t;
   document.getElementById('tabJadval').classList.toggle('active',t==='jadval');
@@ -399,7 +389,7 @@ function switchTab(t){
 }
 
 function renderTabs(){
-  const el=document.getElementById('dayTabs'); el.innerHTML='';
+  const el=document.getElementById('dayTabs');el.innerHTML='';
   DS.forEach((s,d)=>{
     const cnt=getLessonsForDay(d).length;
     const btn=document.createElement('button');
@@ -412,7 +402,7 @@ function renderTabs(){
 
 function renderContent(){
   const el=document.getElementById('content');
-  const today=todayIdx(); const now=nowMin();
+  const today=todayIdx();const now=nowMin();
   const items=getLessonsForDay(selDay);
 
   if(!items.length){
@@ -421,12 +411,11 @@ function renderContent(){
   }
 
   el.innerHTML='';
-
-  const active=items.filter(x=>getTodayStatus(x.student,x.time)!=='done'&&getTodayStatus(x.student,x.time)!=='skipped');
+  const active=items.filter(x=>{const st=getTodayStatus(x.student,x.time);return st!=='done'&&st!=='skipped';});
   const done=items.filter(x=>getTodayStatus(x.student,x.time)==='done');
   const skipped=items.filter(x=>getTodayStatus(x.student,x.time)==='skipped');
 
-  function group(arr,lbl,type){
+  function group(arr,lbl){
     if(!arr.length) return;
     const wrap=document.createElement('div');
     wrap.innerHTML=`<div class="sec-label">${lbl}</div>`;
@@ -436,50 +425,51 @@ function renderContent(){
     arr.forEach(({student,time})=>{
       const status=getTodayStatus(student,time);
       const diff=toMin(time)-now;
-      const isSoon=selDay===today&&status===null&&diff<=student.rem&&diff>=0;
+      const isSoon=selDay===today&&!status&&diff<=student.rem&&diff>=0;
       let sub='',subC='';
-      if(selDay===today&&status===null){
+      if(selDay===today&&!status){
         if(isSoon){sub=diff===0?'Hozir boshlanadi!':`${diff} daqiqada`;subC='soon-c';}
         else if(diff>0&&diff<120){sub=`${diff} daqiqadan keyin`;}
       }
-      const row=document.createElement('div');
       const isDone=status==='done';
       const isSkip=status==='skipped';
+      const countDone=student.history.filter(h=>h.status==='done').length;
+
+      const row=document.createElement('div');
       row.className=`lesson-row${isDone?' done':''}${isSkip?' skipped':''}${isSoon?' soon':''}`;
       let pt;
       row.addEventListener('touchstart',()=>{pt=setTimeout(()=>row.classList.add('show-del'),600);});
       row.addEventListener('touchend',()=>clearTimeout(pt));
       row.addEventListener('mouseleave',()=>row.classList.remove('show-del'));
 
-      const countDone = student.history.filter(h=>h.status==='done').length;
-
       row.innerHTML=`
         <div class="lesson-time">${time}</div>
         <div class="lesson-info">
           <div class="lesson-name">${student.name}</div>
           ${sub?`<div class="lesson-sub ${subC}">${sub}</div>`:
-            isDone?`<div class="lesson-sub" style="color:var(--green)">✓ O'tildi • Jami: ${countDone} dars</div>`:
+            isDone?`<div class="lesson-sub" style="color:var(--green)">✓ O'tildi • Jami: ${countDone} ta</div>`:
             isSkip?`<div class="lesson-sub" style="color:var(--red)">✗ Qoldirildi</div>`:''}
         </div>
-        <div class="toggle-wrap">
-          <button class="toggle ${isDone?'on':''}" onclick="toggleLesson(${student.id},'${time}','${status||''}')">
-            <div class="toggle-knob"></div>
-          </button>
-          <div class="toggle-lbl">${isDone?"O'tildi":isSkip?"Qoldi":"O'tilmadi"}</div>
-        </div>
-        <button class="del-btn" onclick="deleteStudent(${student.id})">✕</button>`;
+        <div class="row-actions">
+          <div class="toggle-wrap">
+            <button class="toggle ${isDone?'on':''}" onclick="toggleLesson(${student.id},'${time}','${status||''}')">
+              <div class="toggle-knob"></div>
+            </button>
+            <div class="toggle-lbl">${isDone?"O'tildi":isSkip?"Qoldi":"O'tilmadi"}</div>
+          </div>
+          <button class="edit-btn" onclick="openModal(${student.id})">✎</button>
+          <button class="del-btn" onclick="deleteStudent(${student.id})">✕</button>
+        </div>`;
       list.appendChild(row);
     });
     el.appendChild(list);
   }
 
-  const dayLabel=selDay===today?"BUGUN":DAYS[selDay].toUpperCase();
-  group(active,dayLabel,'active');
-  group(done,"O'TILGAN",'done');
-  group(skipped,"QOLDIRILGAN",'skipped');
+  group(active,selDay===today?"BUGUN":DAYS[selDay].toUpperCase());
+  group(done,"O'TILGAN");
+  group(skipped,"QOLDIRILGAN");
 }
 
-// STATS
 function changeMonth(dir){
   statMonth+=dir;
   if(statMonth<0){statMonth=11;statYear--;}
@@ -490,45 +480,30 @@ function changeMonth(dir){
 function renderStats(){
   document.getElementById('monthLabel').textContent=`${MONTHS[statMonth]} ${statYear}`;
   const el=document.getElementById('statsContent');
-
   if(!students.length){
     el.innerHTML=`<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-text">Hali shogird yo'q</div></div>`;
     return;
   }
-
-  // Count days in month per student
   el.innerHTML='';
 
-  // Total summary
-  let totalDone=0, totalSkipped=0, totalEarned=0;
+  const daysInMonth=new Date(statYear,statMonth+1,0).getDate();
+  const nowD=new Date();
+  const upTo=statYear===nowD.getFullYear()&&statMonth===nowD.getMonth()?nowD.getDate():daysInMonth;
+
+  let totalDone=0,totalEarned=0,totalSkipped=0;
 
   students.forEach(s=>{
-    // Filter history for this month
-    const monthHistory=s.history.filter(h=>{
-      const [y,m]=h.date.split('-').map(Number);
-      return y===statYear&&m===statMonth+1;
-    });
-    const done=monthHistory.filter(h=>h.status==='done').length;
-    const skipped=monthHistory.filter(h=>h.status==='skipped').length;
+    const mh=s.history.filter(h=>{const[y,m]=h.date.split('-').map(Number);return y===statYear&&m===statMonth+1;});
+    const done=mh.filter(h=>h.status==='done').length;
+    const skipped=mh.filter(h=>h.status==='skipped').length;
     const earned=done*(s.price||0);
-    totalDone+=done; totalSkipped+=skipped; totalEarned+=earned;
+    totalDone+=done;totalSkipped+=skipped;totalEarned+=earned;
 
-    // How many lessons planned this month
-    const daysInMonth=new Date(statYear,statMonth+1,0).getDate();
-    let planned=0;
-    for(let d=1;d<=daysInMonth;d++){
-      const date=new Date(statYear,statMonth,d);
-      const dayIdx=date.getDay()===0?6:date.getDay()-1;
-      s.schedule.forEach(sc=>{ if(sc.day===dayIdx) planned++; });
-    }
-    // Only count up to today
-    const now=new Date();
     let plannedSoFar=0;
-    const upTo=statYear===now.getFullYear()&&statMonth===now.getMonth()?now.getDate():daysInMonth;
     for(let d=1;d<=upTo;d++){
       const date=new Date(statYear,statMonth,d);
       const dayIdx=date.getDay()===0?6:date.getDay()-1;
-      s.schedule.forEach(sc=>{ if(sc.day===dayIdx) plannedSoFar++; });
+      s.schedule.forEach(sc=>{if(sc.day===dayIdx)plannedSoFar++;});
     }
 
     const card=document.createElement('div');
@@ -541,27 +516,25 @@ function renderStats(){
       ${s.price?`
       <div class="stat-divider"></div>
       <div class="stat-row"><span class="stat-label">Dars narxi</span><span class="stat-val">${s.price.toLocaleString()} so'm</span></div>
-      <div class="stat-row"><span class="stat-label">To'lov (o'tilgan)</span><span class="stat-val orange">${earned.toLocaleString()} so'm</span></div>`:''}
+      <div class="stat-row"><span class="stat-label">Hisoblangan to'lov</span><span class="stat-val orange">${earned.toLocaleString()} so'm</span></div>`:''}
       <div class="stat-divider"></div>
-      <div class="stat-row"><span class="stat-label">Dars kunlari</span><span class="stat-val" style="color:var(--blue)">${s.schedule.map(sc=>DAYS[sc.day].slice(0,2)+' '+sc.time).join(', ')}</span></div>`;
+      <div class="stat-row"><span class="stat-label">Dars kunlari</span><span class="stat-val" style="color:var(--blue);font-size:0.78rem">${s.schedule.map(sc=>DS[sc.day]+' '+sc.time).join(', ')}</span></div>`;
     el.appendChild(card);
   });
 
-  // Summary card
-  if(students.length>1){
-    const sum=document.createElement('div');
-    sum.className='student-stat-card';
-    sum.style.border='1px solid var(--orange)';
-    sum.innerHTML=`
-      <div class="stat-name" style="color:var(--orange)">📊 Jami — ${MONTHS[statMonth]}</div>
-      <div class="stat-row"><span class="stat-label">Barcha o'tilgan darslar</span><span class="stat-val green">${totalDone} ta</span></div>
-      <div class="stat-row"><span class="stat-label">Barcha qoldirilgan</span><span class="stat-val red">${totalSkipped} ta</span></div>
-      ${totalEarned?`<div class="stat-row"><span class="stat-label">Jami daromad</span><span class="stat-val purple">${totalEarned.toLocaleString()} so'm</span></div>`:''}`;
-    el.appendChild(sum);
+  // Salary summary
+  if(totalEarned>0){
+    const sal=document.createElement('div');
+    sal.className='salary-card';
+    sal.innerHTML=`
+      <div class="salary-title">💰 ${MONTHS[statMonth]} — Oylik maosh</div>
+      <div class="salary-total">${totalEarned.toLocaleString()} so'm</div>
+      <div class="salary-sub">Jami ${totalDone} ta dars o'tildi • ${totalSkipped} ta qoldirildi</div>`;
+    el.insertBefore(sal,el.firstChild);
   }
 }
 
-function render(){ renderTabs(); renderContent(); if(curTab==='stat') renderStats(); }
+function render(){renderTabs();renderContent();if(curTab==='stat')renderStats();}
 
 function updateClock(){
   const n=new Date();
@@ -572,48 +545,50 @@ function updateClock(){
 }
 
 function checkReminders(){
-  const today=todayIdx(); const now=nowMin();
+  const today=todayIdx();const now=nowMin();
   students.forEach(s=>{
     s.schedule.filter(sc=>sc.day===today).forEach(sc=>{
       const diff=toMin(sc.time)-now;
-      const key=`${s.id}_${sc.time}_${todayKey()}`;
       const status=getTodayStatus(s,sc.time);
-      if(diff<=s.rem&&diff>=0&&!noted.has(key)&&!status){
-        noted.add(key);
-        sessionStorage.setItem('dars4_noted',JSON.stringify([...noted]));
-        showBanner(s,sc.time,diff);
+
+      // 5/10 daqiqa OLDIN eslatma
+      const beforeKey=`before_${s.id}_${sc.time}_${todayKey()}`;
+      if(diff<=(s.rem||5)&&diff>=0&&!noted.has(beforeKey)&&!status){
+        noted.add(beforeKey);
+        sessionStorage.setItem('dars5_n',JSON.stringify([...noted]));
+        showBanner(`⏰ Dars eslatmasi`,s.name,`${sc.time} — ${diff===0?'Hozir boshlanadi!':diff+' daqiqada boshlanadi'}`);
+        if('Notification'in window&&Notification.permission==='granted'){
+          new Notification('⏰ Dars eslatmasi',{body:`${s.name} — ${sc.time}`});
+        }
       }
-      // Ask "did lesson happen?" 10 min after lesson was supposed to start
-      const afterKey=`ask_${s.id}_${sc.time}_${todayKey()}`;
-      if(diff<=-10&&diff>=-40&&!noted.has(afterKey)&&!status){
+
+      // 45 daqiqa O'TGANDAN KEYIN "O'tdimi?" so'rovi
+      const afterKey=`after_${s.id}_${sc.time}_${todayKey()}`;
+      if(diff<=-45&&diff>=-90&&!noted.has(afterKey)&&!status){
         noted.add(afterKey);
-        sessionStorage.setItem('dars4_noted',JSON.stringify([...noted]));
-        // Show confirmation popup
-        showConfirm('📚',`${s.name}`,`${sc.time} — dars o'tdimi?`,[
-          {label:"Ha, o'tdi ✓",cls:'cbtn-yes',fn:()=>setHistory(s.id,sc.time,'done')},
-          {label:"Qoldirildi ✗",cls:'cbtn-skip',fn:()=>setHistory(s.id,sc.time,'skipped')}
+        sessionStorage.setItem('dars5_n',JSON.stringify([...noted]));
+        showConfirm('📚',s.name,`${sc.time} — dars o'tdimi?`,[
+          {label:"✓ Ha, o'tdi",cls:'cbtn-yes',fn:()=>setHistory(s.id,sc.time,'done')},
+          {label:"✗ Qoldirildi",cls:'cbtn-skip',fn:()=>setHistory(s.id,sc.time,'skipped')}
         ]);
       }
     });
   });
 }
 
-function showBanner(s,time,diff){
+function showBanner(title,name,sub){
   const b=document.createElement('div');
   b.style.cssText=`position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#1c1c1e;border:1px solid #38383a;border-left:3px solid #ff9f0a;border-radius:14px;padding:13px 18px;z-index:150;min-width:250px;max-width:340px;box-shadow:0 8px 30px rgba(0,0,0,0.6);animation:slideDown .3s ease;font-family:'Nunito',sans-serif;`;
-  b.innerHTML=`<div style="font-size:.7rem;color:#ff9f0a;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px">⏰ Dars eslatmasi</div><div style="font-size:.98rem;font-weight:700">${s.name}</div><div style="font-size:.8rem;color:#8e8e93;margin-top:2px">${time} — ${diff===0?'Hozir!':diff+' daqiqada'}</div>`;
+  b.innerHTML=`<div style="font-size:.7rem;color:#ff9f0a;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px">${title}</div><div style="font-size:.98rem;font-weight:700">${name}</div><div style="font-size:.8rem;color:#8e8e93;margin-top:2px">${sub}</div>`;
   document.body.appendChild(b);
-  setTimeout(()=>b.remove(),6000);
-  if('Notification'in window&&Notification.permission==='granted'){
-    new Notification('⏰ Dars',{body:`${s.name} — ${time}`});
-  }
+  setTimeout(()=>b.remove(),7000);
 }
 
-if('Notification'in window&&Notification.permission==='default') Notification.requestPermission();
+if('Notification'in window&&Notification.permission==='default')Notification.requestPermission();
 
-render(); updateClock();
-setInterval(updateClock,15000);
-setInterval(()=>{ checkReminders(); renderContent(); },30000);
+render();updateClock();
+setInterval(updateClock,1000);
+setInterval(()=>{checkReminders();renderContent();},60000);
 checkReminders();
 </script>
 </body>
